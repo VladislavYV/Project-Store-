@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.comfortaa-300 {
+  font-family: "Comfortaa", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 300;
+}
+.comfortaa-400 {
+  font-family: "Comfortaa", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+}
+.comfortaa-500 {
+  font-family: "Comfortaa", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 500;
+}
+.comfortaa-700 {
+  font-family: "Comfortaa", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 25px;
+}
+h4 {
+  font-size: 20px;
+}
+
+p,
+a,
+button {
+  font-size: 18px;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.product-cards-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}/*# sourceMappingURL=style.css.map */

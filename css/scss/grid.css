@@ -1,0 +1,27 @@
+.container {
+  width: 100%;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.col-2 {
+  width: 100%;
+  max-width: 16.6%;
+}
+.col-3 {
+  width: 100%;
+  max-width: 25%;
+}
+.col-4 {
+  width: 100%;
+  max-width: 33.33%;
+}
+.col-6 {
+  width: 100%;
+  max-width: 50%;
+}
+.col-12 {
+  width: 100%;
+  max-width: 100%;
+}/*# sourceMappingURL=grid.css.map */
