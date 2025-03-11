@@ -7,6 +7,7 @@
   padding: 0;
   box-sizing: border-box;
   letter-spacing: 1px;
+  color: #fff;
 }
 
 body {
@@ -80,6 +81,35 @@ img {
   display: flex;
   flex-direction: row;
 }
+.cars-filters__items {
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cars-filters__colors-items {
+  padding-top: 7px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.cars-filters__colors-item {
+  flex-shrink: 0;
+}
+.cars-filters__colors-checkbox {
+  display: none;
+}
+.cars-filters__colors-label {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  outline: greenyellow 0px solid;
+  outline-offset: 0px;
+  transition: all 0.2s;
+}
 .cars-cards__wrapper {
   display: flex;
   flex-direction: row;
@@ -89,7 +119,7 @@ img {
 .cars-card__wrapper {
   padding: 20px;
   border: 3px #00ac95 solid;
-  border-radius: 20px;
+  border-radius: 15px;
 }
 .cars-card__img {
   padding: 20px 0 0 0;
@@ -133,10 +163,10 @@ img {
 .cars-card__buttons-open {
   display: block;
   font-size: 20px;
-  color: #fff;
+  color: #000;
   background-color: #00ac95;
   border: 3px transparent solid;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 5px 20px 5px 20px;
   transition: 0.2s;
 }
@@ -150,8 +180,8 @@ img {
   width: 30px;
 }
 .cars-card__buttons-favorite > svg {
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
   display: flex;
 }
 .cars-card__buttons-favorite > svg > path {

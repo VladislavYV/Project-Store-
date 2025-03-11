@@ -8,6 +8,7 @@
     padding: 0;
     box-sizing: border-box;
     letter-spacing: 1px;
+    color: #fff;
 }
 
 $main-color: #00ac95;
@@ -97,6 +98,41 @@ img {
         }
     }
 
+    &-filters {
+
+        &__items {
+            padding-top: 60px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        &__colors {
+            &-items {
+                padding-top: 7px;
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+            &-item {
+                flex-shrink: 0;
+            }
+            &-checkbox {
+                display: none;
+            }
+            &-label {
+                display: inline-block;
+                position: relative;
+                width: 30px;
+                height: 30px;
+                border-radius: 5px;
+                outline: greenyellow 0px solid;
+                outline-offset: 0px;
+                transition: all 0.2s;
+            }
+        }
+    }
+
     &-cards {
         &__wrapper {
             display: flex;
@@ -112,7 +148,7 @@ img {
         &__wrapper {
             padding: 20px;
             border: 3px $main-color solid;
-            border-radius: 20px;
+            border-radius: 15px;
         }
 
         &__img {
@@ -163,10 +199,10 @@ img {
             &-open {
                 display: block;;
                 font-size: 20px;
-                color: #fff;
+                color: #000;
                 background-color: $main-color;
                 border: 3px transparent solid;
-                border-radius: 20px;
+                border-radius: 10px;
                 padding: 5px 20px 5px 20px;
                 transition: 0.2s;
 
@@ -182,8 +218,8 @@ img {
                 width: 30px;
 
                 &>svg {
-                    width: auto;
-                    height: 100%;
+                    width: 100%;
+                    height: auto;
                     display: flex;
 
                     &>path {
