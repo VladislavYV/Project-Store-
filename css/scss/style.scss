@@ -1,20 +1,16 @@
+@font-face {
+    font-family: "Comfortaa";
+    src: url("/fonts/Comfortaa/Comfortaa.ttf") format("ttf"), url("/fonts/Comfortaa.woff") format("woff");
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    letter-spacing: 1px;
 }
 
-$btn-open-color-text: #000;
-$btn-open-color-bg: #00ac95;
-$btn-open-color-active-text: #fff;
-$btn-open-color-active-bg: #6380ff;
-$btn-open-color-hover-text: rgb(0, 0, 0);
-$btn-open-color-hover-bg: rgb(223, 134, 0);
-// $btn-cart-color-text: #000;
-// $btn-cart-color-bg: #fff;
-$card-color-bg: #fff;
-$card-color-border: #00ac95;
-$card-color-text: #ffffff;
+$main-color: #00ac95;
 
 body {
     background-color: #292929;
@@ -22,28 +18,28 @@ body {
 
 .comfortaa {
     &-300 {
-        font-family: "Comfortaa", serif;
+        font-family: "Comfortaa", sans-serif;
         font-optical-sizing: auto;
         font-style: normal;
         font-weight: 300;
     }
 
     &-400 {
-        font-family: "Comfortaa", serif;
+        font-family: "Comfortaa", sans-serif;
         font-optical-sizing: auto;
         font-style: normal;
         font-weight: 400;
     }
 
     &-500 {
-        font-family: "Comfortaa", serif;
+        font-family: "Comfortaa", sans-serif;
         font-optical-sizing: auto;
         font-style: normal;
         font-weight: 500;
     }
 
     &-700 {
-        font-family: "Comfortaa", serif;
+        font-family: "Comfortaa", sans-serif;
         font-optical-sizing: auto;
         font-style: normal;
         font-weight: 700;
@@ -57,7 +53,7 @@ h {
 
     &2 {
         font-size: 30px;
-        color: #00ac95;
+        color: $main-color;
     }
 
     &3 {
@@ -80,6 +76,8 @@ button {
 a,
 button {
     cursor: pointer;
+    border: 0;
+    background-color: transparent;
 }
 
 img {
@@ -87,77 +85,116 @@ img {
     height: auto;
 }
 
-.offers {
-    padding-top: 60px;
-}
-
-.product-cards {
-
+.cars {
     padding-top: 60px;
 
-    &-wrapper {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        // gap: 10px;
-    }
-}
+    &-catalog {
 
-.product-card {
-    // border: 3px $card-color-border solid;
-    // box-shadow: 0px 0px 10px 2px $card-color-border;
-    box-shadow: inset 0px 0px 10px 2px $card-color-border;
-    border-radius: 20px;
-    padding: 20px;
-    max-width: auto;
-    margin: 0 10px 0 10px;
-
-    &:first-child {
-        margin: 0 10px 0 0;
+        &__wrapper {
+            padding-top: 60px;
+            display: flex;
+            flex-direction: row;
+        }
     }
 
-    &:last-child {
-        margin: 0 0 0 10px;
+    &-cards {
+        &__wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            // border: 3px $main-color solid;
+            // border-radius: 20px;
+            gap: 20px;
+        }
     }
 
-    h3 {
-        text-align: center;
-    }
-
-    &-wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    &__text {
-        text-align: center;
-        color: $card-color-text
-    }
-
-    &__buttons {
-        display: flex;
-        gap: 20px;
-        flex-direction: column;
-
-        button {
-            padding: 10px 10px 10px 10px;
-            border: 0;
+    &-card {
+        &__wrapper {
+            padding: 20px;
+            border: 3px $main-color solid;
             border-radius: 20px;
-            color: $btn-open-color-text;
-            background-color: $btn-open-color-bg;
-            transition: 0.3s;
+        }
 
-            &:active {
-                color: $btn-open-color-active-text;
-                background-color: $btn-open-color-active-bg;
+        &__img {
+            padding: 20px 0 0 0;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__stats {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px 0 0 0;
+
+            &-text {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                &>p {
+                    text-align: start;
+                    padding: 5px 0 5px 0;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    color: #fff;
+                }
+            }
+        }
+
+        &__price {
+            padding: 20px 0 0 0;
+            color: #fff;
+
+            &>p {
+                font-size: 24px;
+            }
+        }
+
+        &__buttons {
+            padding: 20px 0 0 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            &-open {
+                display: block;;
+                font-size: 20px;
+                color: #fff;
+                background-color: $main-color;
+                border: 3px transparent solid;
+                border-radius: 20px;
+                padding: 5px 20px 5px 20px;
+                transition: 0.2s;
+
+                &:hover {
+                    background-color: transparent;
+                    border: 3px $main-color solid;
+                    color: $main-color;
+                }
             }
 
-            &:hover {
-                color: $btn-open-color-hover-text;
-                background-color: $btn-open-color-hover-bg;
-                font-weight: 700;
+            &-favorite {
+                background-color: transparent;
+                width: 30px;
+
+                &>svg {
+                    width: auto;
+                    height: 100%;
+                    display: flex;
+
+                    &>path {
+                        fill: #fff;
+                        transition: all 0.2s;
+                    }
+                }
+
+                &:hover > svg > path {
+                    fill: red;
+                }
             }
         }
     }

@@ -5,6 +5,10 @@
   margin-right: auto;
 }
 
+.col-1 {
+  width: 100%;
+  max-width: 8.3%;
+}
 .col-2 {
   width: 100%;
   max-width: 16.6%;
@@ -15,11 +19,35 @@
 }
 .col-4 {
   width: 100%;
-  max-width: 33.33%;
+  max-width: 33.3%;
+}
+.col-5 {
+  width: 100%;
+  max-width: 41.6%;
 }
 .col-6 {
   width: 100%;
   max-width: 50%;
+}
+.col-7 {
+  width: 100%;
+  max-width: 58.4%;
+}
+.col-8 {
+  width: 100%;
+  max-width: 66.7%;
+}
+.col-9 {
+  width: 100%;
+  max-width: 75%;
+}
+.col-10 {
+  width: 100%;
+  max-width: 83.4%;
+}
+.col-11 {
+  width: 100%;
+  max-width: 91.7%;
 }
 .col-12 {
   width: 100%;
