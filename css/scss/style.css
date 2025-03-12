@@ -52,6 +52,7 @@ h3 {
 }
 h4 {
   font-size: 20px;
+  color: #00ac95;
 }
 
 p,
@@ -73,6 +74,42 @@ img {
   height: auto;
 }
 
+input[type=radio], input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #00ac95;
+  transition: all 0.2s;
+}
+input[type=radio]:checked, input[type=checkbox]:checked {
+  transform: scale(0.5);
+  background-color: #00ac95;
+  outline: 3px solid #00ac95;
+  outline-offset: 10px;
+}
+input[type=radio]:disabled, input[type=checkbox]:disabled {
+  border: rgb(119, 119, 119) solid 2px;
+}
+input[type=radio]:disabled:checked, input[type=checkbox]:disabled:checked {
+  transform: scale(0.5);
+  background-color: rgb(119, 119, 119);
+  outline: 2px solid rgb(119, 119, 119);
+  outline-offset: 10px;
+}
+
+input[type=radio] {
+  border-radius: 50%;
+}
+
+input[type=checkbox] {
+  border-radius: 5px;
+}
+input[type=checkbox]:checked {
+  border-radius: 3px;
+}
+
 .cars {
   padding-top: 60px;
 }
@@ -80,18 +117,28 @@ img {
   padding-top: 60px;
   display: flex;
   flex-direction: row;
+  gap: 20px;
 }
 .cars-filters__items {
   padding-top: 60px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
 }
-.cars-filters__colors-items {
-  padding-top: 7px;
+.cars-filters__colors-items, .cars-filters__hp-items, .cars-filters__gearbox-items, .cars-filters__volume-items, .cars-filters__doors-items, .cars-filters__volume-bag-items, .cars-filters__price-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 10px;
+}
+.cars-filters__colors-item, .cars-filters__hp-item, .cars-filters__gearbox-item, .cars-filters__volume-item, .cars-filters__doors-item, .cars-filters__volume-bag-item, .cars-filters__price-item {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  align-items: center;
+}
+.cars-filters__colors-items {
+  flex-direction: row;
   flex-wrap: wrap;
 }
 .cars-filters__colors-item {
@@ -106,9 +153,17 @@ img {
   width: 30px;
   height: 30px;
   border-radius: 5px;
-  outline: greenyellow 0px solid;
+  outline: #00ac95 0px solid;
   outline-offset: 0px;
   transition: all 0.2s;
+}
+.cars-filters__colors-label:hover, .cars-filters__colors-label:focus {
+  outline: #00ac95 2px solid;
+  outline-offset: 2px;
+  cursor: pointer;
+}
+.cars-filters__colors-label:active {
+  outline-offset: 20px;
 }
 .cars-cards__wrapper {
   display: flex;
@@ -165,14 +220,14 @@ img {
   font-size: 20px;
   color: #000;
   background-color: #00ac95;
-  border: 3px transparent solid;
+  border: 2px transparent solid;
   border-radius: 10px;
   padding: 5px 20px 5px 20px;
   transition: 0.2s;
 }
 .cars-card__buttons-open:hover {
   background-color: transparent;
-  border: 3px #00ac95 solid;
+  border: 2px #00ac95 solid;
   color: #00ac95;
 }
 .cars-card__buttons-favorite {

@@ -64,6 +64,7 @@ h {
 
     &4 {
         font-size: 20px;
+        color: $main-color;
     }
 }
 
@@ -86,6 +87,53 @@ img {
     height: auto;
 }
 
+input[type="radio"], input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid $main-color;
+    transition: all 0.2s;
+    
+    &:checked {
+        transform: scale(0.5);
+        background-color: $main-color;
+        outline: 3px solid $main-color;
+        outline-offset: 10px;
+    }
+
+    &:disabled {
+        border: rgb(119, 119, 119) solid 2px;
+    }
+
+    &:disabled:checked {
+        transform: scale(0.5);
+        background-color: rgb(119, 119, 119);
+        outline: 2px solid rgb(119, 119, 119);
+        outline-offset: 10px;
+    }
+}
+
+input[type="radio"] {
+    border-radius: 50%;
+}
+
+input[type="checkbox"] {
+    border-radius: 5px;
+
+    &:checked {
+        border-radius: 3px;
+    }
+}
+
+// .line-filters {
+//     position: relative;
+//     content: '';
+//     display: block;
+//     height: 3px;
+//     width: 100%;
+//     background-color: $main-color;
+// }
+
 .cars {
     padding-top: 60px;
 
@@ -95,6 +143,7 @@ img {
             padding-top: 60px;
             display: flex;
             flex-direction: row;
+            gap: 20px;
         }
     }
 
@@ -104,14 +153,28 @@ img {
             padding-top: 60px;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 30px;
         }
-        &__colors {
+
+        &__colors, &__hp, &__gearbox, &__volume, &__doors, &__volume-bag, &__price {
             &-items {
-                padding-top: 7px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding-top: 10px;
+            }
+
+            &-item {
                 display: flex;
                 flex-direction: row;
                 gap: 10px;
+                align-items: center;
+            }
+        }
+
+        &__colors {
+            &-items {
+                flex-direction: row;
                 flex-wrap: wrap;
             }
             &-item {
@@ -126,10 +189,38 @@ img {
                 width: 30px;
                 height: 30px;
                 border-radius: 5px;
-                outline: greenyellow 0px solid;
+                outline: $main-color 0px solid;
                 outline-offset: 0px;
                 transition: all 0.2s;
+
+                &:hover, &:focus {
+                    outline: $main-color 2px solid;
+                    outline-offset: 2px;
+                    cursor: pointer;
+                }
+
+                &:active {
+                    outline-offset: 20px;
+                }
             }
+        }
+
+        &__hp {
+        }
+
+        &__gearbox {
+        }
+
+        &__volume {
+        }
+
+        &__doors {
+        }
+
+        &__volume-bag {
+        }
+
+        &__price {
         }
     }
 
@@ -147,6 +238,10 @@ img {
     &-card {
         &__wrapper {
             padding: 20px;
+            // border-top: 3px solid $main-color;
+            // border-bottom: 3px solid $main-color;
+            // border-left: 3px solid $main-color;
+            // border-right: 3px solid $main-color;
             border: 3px $main-color solid;
             border-radius: 15px;
         }
@@ -201,14 +296,14 @@ img {
                 font-size: 20px;
                 color: #000;
                 background-color: $main-color;
-                border: 3px transparent solid;
+                border: 2px transparent solid;
                 border-radius: 10px;
                 padding: 5px 20px 5px 20px;
                 transition: 0.2s;
 
                 &:hover {
                     background-color: transparent;
-                    border: 3px $main-color solid;
+                    border: 2px $main-color solid;
                     color: $main-color;
                 }
             }
