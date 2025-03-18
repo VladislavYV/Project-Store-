@@ -10,10 +10,10 @@ function changeCheckbox(elem) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const colorLabels = document.querySelectorAll('.cars-filters__colors-label');
     colorLabels.forEach(label => {
-        label.addEventListener('keydown', function(event) {
+        label.addEventListener('keydown', function (event) {
             if (event.code === "Space") {
                 event.preventDefault();
                 changeCheckbox(this.id);
@@ -21,3 +21,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+let rangePrice = document.querySelector('input[type="range"].cars-filters__range-slider');
+rangePrice.style.setProperty('--value', rangePrice.value);
+rangePrice.style.setProperty('--min', rangePrice.min == '' ? '0' : rangePrice.min);
+rangePrice.style.setProperty('--max', rangePrice.max == '' ? '100' : rangePrice.max);
+rangePrice.addEventListener('input', () => rangePrice.style.setProperty('--value', rangePrice.value)
+);

@@ -113,6 +113,43 @@ input[type="radio"], input[type="checkbox"] {
     }
 }
 
+input[type="range"] {
+    appearance: none;
+    height: 10px;
+    margin: 10px 0;
+    width: 100%;
+    cursor: pointer;
+    // outline: 2px $main-color solid;
+    // outline-offset: 3px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid $main-color;
+
+    &::-webkit-slider-thumb {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background-color: $main-color;
+        border-radius: 50px;
+    }
+
+    &.cars-filters__range-slider {
+        --range: calc(var(--max) - var(--min));
+        --ratio: calc((var(--value) - var(--min)) / var(--range));
+        --sx: calc(var(--ratio) * 100%);
+
+        &::-webkit-slider-runnable-track, &::-moz-range-track {
+            background: $main-color 0/var(--sx) 100% no-repeat, transparent;
+        }
+    }
+
+    &:focus {
+        outline: 2px solid white;
+        outline-offset: 5px;
+        cursor: pointer;
+    }
+}
+
 input[type="radio"] {
     border-radius: 50%;
 }
@@ -182,6 +219,10 @@ input[type="checkbox"] {
             }
             &-checkbox {
                 display: none;
+                &:checked+.cars-filters__colors-label {
+                    outline: 2px $main-color solid;
+                    outline-offset: 2px;
+                }
             }
             &-label {
                 display: inline-block;
@@ -202,6 +243,8 @@ input[type="checkbox"] {
                 &:active {
                     outline-offset: 20px;
                 }
+
+                
             }
         }
 
@@ -221,6 +264,19 @@ input[type="checkbox"] {
         }
 
         &__price {
+        }
+
+        &__range {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-top: 10px;
+
+            &-values {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
         }
     }
 
