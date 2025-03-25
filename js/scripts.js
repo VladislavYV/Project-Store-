@@ -1,3 +1,26 @@
+// import Swiper from "swiper";
+// import 'swiper/css';
+// import { Navigation, Pagination } from 'swiper/modules'
+
+
+const swiper = new Swiper('.car-swiper', {
+    direction: "horizontal",
+    loop: true,
+    spaceBetween: 20,
+
+    pagination: {
+        el: '.car-swiper-pagination',
+        clickable: true,
+    },
+
+    navigation: {
+        nextEl: '.car-swiper-btn-next',
+        prevEl: '.car-swiper-btn-prev',
+        
+    }
+});
+
+
 function changeCheckbox(elem) {
     let item = document.getElementById(elem);
     switch (item.getAttribute("aria-checked")) {

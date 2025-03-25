@@ -87,13 +87,14 @@ img {
     height: auto;
 }
 
-input[type="radio"], input[type="checkbox"] {
+input[type="radio"],
+input[type="checkbox"] {
     appearance: none;
     width: 20px;
     height: 20px;
     border: 2px solid $main-color;
     transition: all 0.2s;
-    
+
     &:checked {
         transform: scale(0.5);
         background-color: $main-color;
@@ -138,7 +139,8 @@ input[type="range"] {
         --ratio: calc((var(--value) - var(--min)) / var(--range));
         --sx: calc(var(--ratio) * 100%);
 
-        &::-webkit-slider-runnable-track, &::-moz-range-track {
+        &::-webkit-slider-runnable-track,
+        &::-moz-range-track {
             background: $main-color 0/var(--sx) 100% no-repeat, transparent;
         }
     }
@@ -171,6 +173,23 @@ input[type="checkbox"] {
 //     background-color: $main-color;
 // }
 
+.menu {
+    padding-top: 60px;
+
+    &-items {
+        &__wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            gap: 20px;
+        }
+    }
+
+    &-item {
+        &>a {}
+    }
+}
+
 .cars {
     padding-top: 60px;
 
@@ -193,7 +212,13 @@ input[type="checkbox"] {
             gap: 30px;
         }
 
-        &__colors, &__hp, &__gearbox, &__volume, &__doors, &__volume-bag, &__price {
+        &__colors,
+        &__hp,
+        &__gearbox,
+        &__volume,
+        &__doors,
+        &__volume-bag,
+        &__price {
             &-items {
                 display: flex;
                 flex-direction: column;
@@ -214,16 +239,20 @@ input[type="checkbox"] {
                 flex-direction: row;
                 flex-wrap: wrap;
             }
+
             &-item {
                 flex-shrink: 0;
             }
+
             &-checkbox {
                 display: none;
+
                 &:checked+.cars-filters__colors-label {
                     outline: 2px $main-color solid;
                     outline-offset: 2px;
                 }
             }
+
             &-label {
                 display: inline-block;
                 position: relative;
@@ -234,7 +263,8 @@ input[type="checkbox"] {
                 outline-offset: 0px;
                 transition: all 0.2s;
 
-                &:hover, &:focus {
+                &:hover,
+                &:focus {
                     outline: $main-color 2px solid;
                     outline-offset: 2px;
                     cursor: pointer;
@@ -244,27 +274,21 @@ input[type="checkbox"] {
                     outline-offset: 20px;
                 }
 
-                
+
             }
         }
 
-        &__hp {
-        }
+        &__hp {}
 
-        &__gearbox {
-        }
+        &__gearbox {}
 
-        &__volume {
-        }
+        &__volume {}
 
-        &__doors {
-        }
+        &__doors {}
 
-        &__volume-bag {
-        }
+        &__volume-bag {}
 
-        &__price {
-        }
+        &__price {}
 
         &__range {
             display: flex;
@@ -348,7 +372,8 @@ input[type="checkbox"] {
             justify-content: space-between;
 
             &-open {
-                display: block;;
+                display: block;
+                ;
                 font-size: 20px;
                 color: #000;
                 background-color: $main-color;
@@ -379,10 +404,173 @@ input[type="checkbox"] {
                     }
                 }
 
-                &:hover > svg > path {
+                &:hover>svg>path {
                     fill: red;
                 }
             }
         }
     }
+}
+
+.cart {
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        align-items: end;
+        padding-top: 60px;
+    }
+
+    &-items {
+        padding: 20px;
+        border: 3px $main-color solid;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 20px;
+
+        &__price {
+            font-size: 30px;
+        }
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+
+        &__info {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+
+            &>img {
+                height: auto;
+                width: 200px;
+            }
+        }
+
+        &__text {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            &>h3 {
+                color: $main-color;
+            }
+
+            &>p {
+                color: #999999;
+            }
+        }
+
+        &__price {
+            font-size: 20px;
+        }
+
+        &__control {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+
+            >svg {
+                height: 30px;
+                width: auto;
+                fill: $main-color;
+                cursor: pointer;
+            }
+
+            &:hover {
+                fill: #fff;
+            }
+        }
+    }
+
+    &-btn {
+        padding: 10px 40px;
+        background-color: $main-color;
+        border-radius: 10px;
+    }
+}
+
+.car {
+    padding-top: 60px;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+    }
+
+    &-info {
+        height: 100%;
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+        }
+
+        &__text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__text {
+            gap: 10px;
+        }
+    }
+
+    &-btns {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        &__buy {
+            padding: 10px 40px;
+            background-color: $main-color;
+            border-radius: 10px;
+        }
+
+        &__like {
+            &>svg {
+                height: 30px;
+                width: auto;
+                &>path {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+
+    &-swiper {
+        display: flex;
+        flex-direction: row;
+        height: 500px;
+        width: auto;
+
+        &-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &>img {
+                height: 100%;
+                width: auto;
+            }
+        }
+
+        &-btn-prev, &-btn-next {
+            color:  $main-color;
+        }
+    }
+
+
 }
