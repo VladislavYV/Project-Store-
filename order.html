@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/scss/grid.css">
+    <link rel="stylesheet" href="css/scss/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="js/scripts.js"></script>
+</head>
+
+<body>
+    <header>
+        <section class="menu container">
+            <div class="menu-wrapper col-12">
+                <div class="menu-items col-12">
+                    <div class="menu-items__wrapper">
+                        <div class="menu-item">
+                            <a class="comfortaa-500" href="#">
+                                Вход/регистрация
+                            </a>
+                        </div>
+                        <div class="menu-item">
+                            <a class="comfortaa-500" href="index.html">
+                                Каталог
+                            </a>
+                        </div>
+                        <div class="menu-item">
+                            <a class="comfortaa-500" href="cart.html">
+                                Корзина
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="order container">
+            <div class="order__wrapper col-12">
+                <h2 class="comfortaa-700 col-12">Оформление заказа</h2>
+                <div class="order-items">
+                    <div class="order-name">
+                        <h3 class="comfortaa-500">Ваше имя и фамилия</h3>
+                        <div class="order-name__items">
+                            <input class="comfortaa-300 order-name__item" type="text" name="o-name" id="o-name" tabindex="0" role="text" aria-label="Имя" placeholder="Введите ваше имя">
+                            <input class="comfortaa-300 order-name__item" type="text" name="o-lastname" id="o-lastname" tabindex="0" role="text" aria-label="Фамилия" placeholder="Введите вашу фамилию">
+                        </div>
+                    </div>
+                    <div class="order-phone">
+                        <h3 class="comfortaa-500">Ваш номер телефона</h3>
+                        <input class="comfortaa-300" type="tel" name="o-name" id="o-name" tabindex="0" role="text" aria-label="Номер телефона" placeholder="Введите ваш номер телефона">
+                    </div> 
+                    <div class="order-email">
+                        <h3 class="comfortaa-500">Ваш адрес эл. почты</h3>
+                        <input class="comfortaa-300" type="email" name="o-name" id="o-name" tabindex="0" role="text" aria-label="Электронная потча" placeholder="Введите адрес вашей эл. почты">
+                    </div> 
+                    <div class="order-delivery">
+                        <h3 class="comfortaa-500">Выберите способ доставки</h3>
+                        <div class="order-delivery__items">
+                            <div class="order-delivery__item">
+                                <input class="order-delivery__radio" type="radio" name="delivery"
+                                    id="delivery-s">
+                                <label class="order-delivery__label comfortaa-300" for="delivery-s"
+                                    tabindex="0" id="delivery-s-label" aria-label="Самовывоз" role="radio"
+                                    aria-checked="false">Самовывоз</label>
+                            </div>
+                            <div class="order-delivery__item">
+                                <input class="order-delivery__radio" type="radio" name="delivery"
+                                    id="delivery-d">
+                                <label class="order-delivery__label comfortaa-300" for="delivery-d"
+                                    tabindex="0" id="delivery-d-label" aria-label="Доставка" role="radio"
+                                    aria-checked="false">Доставка эвакуатором</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-date">
+                        <h3 class="comfortaa-500">Выберите дату получения авто</h3>
+                        <input class="comfortaa-300" type="date" name="o-date" id="o-date" tabindex="0" role="date" aria-label="Дата" placeholder="Выберите дату">
+                    </div> 
+                    <div class="order-pay">
+                        <h3 class="comfortaa-500">Выберите способ оплаты</h3>
+                        <div class="order-pay__items">
+                            <div class="order-pay__item">
+                                <input class="order-pay__radio" type="radio" name="pay"
+                                    id="pay-nal">
+                                <label class="order-pay__label comfortaa-300" for="pay-nal"
+                                    tabindex="0" id="pay-nal-label" aria-label="Наличными" role="radio"
+                                    aria-checked="false">Наличными</label>
+                            </div>
+                            <div class="order-pay__item">
+                                <input class="order-pay__radio" type="radio" name="pay"
+                                    id="pay-card">
+                                <label class="order-pay__label comfortaa-300" for="pay-card"
+                                    tabindex="0" id="pay-card-label" aria-label="Картой" role="radio"
+                                    aria-checked="false">Картой</label>
+                            </div>
+                            <div class="order-pay__item">
+                                <input class="order-pay__radio" type="radio" name="pay"
+                                    id="pay-bank">
+                                <label class="order-pay__label comfortaa-300" for="pay-bank"
+                                    tabindex="0" id="pay-bank-label" aria-label="Банковский перевод" role="radio"
+                                    aria-checked="false">Банковским переводом</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-person">
+                        <h3 class="comfortaa-500">Плательщик</h3>
+                        <div class="order-person__items">
+                            <div class="order-person__item">
+                                <input class="order-person__radio" type="radio" name="person"
+                                    id="person-phys">
+                                <label class="order-person__label comfortaa-300" for="person-phys"
+                                    tabindex="0" id="person-phys-label" aria-label="Физическое лицо" role="radio"
+                                    aria-checked="false">Физическое лицо</label>
+                            </div>
+                            <div class="order-person__item">
+                                <input class="order-person__radio" type="radio" name="person"
+                                    id="person-yr">
+                                <label class="order-person__label comfortaa-300" for="person-yr"
+                                    tabindex="0" id="person-yr-label" aria-label="Юридическое лицо" role="radio"
+                                    aria-checked="false">Юридическое лицо</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-button">
+                        <a href="#" class="button comfortaa-400">Оформить</a>
+                    </div>  
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+
+</body>
+
+</html>

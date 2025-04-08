@@ -184,10 +184,6 @@ input[type="checkbox"] {
             gap: 20px;
         }
     }
-
-    &-item {
-        &>a {}
-    }
 }
 
 .cars {
@@ -278,18 +274,6 @@ input[type="checkbox"] {
             }
         }
 
-        &__hp {}
-
-        &__gearbox {}
-
-        &__volume {}
-
-        &__doors {}
-
-        &__volume-bag {}
-
-        &__price {}
-
         &__range {
             display: flex;
             flex-direction: column;
@@ -373,7 +357,6 @@ input[type="checkbox"] {
 
             &-open {
                 display: block;
-                ;
                 font-size: 20px;
                 color: #000;
                 background-color: $main-color;
@@ -543,6 +526,7 @@ input[type="checkbox"] {
             &>svg {
                 height: 30px;
                 width: auto;
+
                 &>path {
                     fill: #fff;
                 }
@@ -567,10 +551,109 @@ input[type="checkbox"] {
             }
         }
 
-        &-btn-prev, &-btn-next {
-            color:  $main-color;
+        &-btn-prev,
+        &-btn-next {
+            color: $main-color;
         }
     }
 
 
+}
+
+.order {
+    &__wrapper {
+        padding: 60px 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        text-align: center;
+    }
+
+    &-items {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    &-name,
+    &-phone,
+    &-email,
+    &-delivery,
+    &-date,
+    &-pay,
+    &-person,
+    &-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    &-name {
+        &__items {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        &__item {
+            padding: 10px;
+            border-radius: 10px;
+            border: $main-color 2px solid;
+            background-color: transparent;
+            width: 500px;
+            font-size: 16px;
+        }
+    }
+
+    &-phone,
+    &-email,
+    &-date {
+        &>input {
+            padding: 10px;
+            border-radius: 10px;
+            border: $main-color 2px solid;
+            background-color: transparent;
+            width: 500px;
+            font-size: 16px;
+
+            &::-webkit-calendar-picker-indicator {
+                filter: invert(1);
+            }
+        }
+    }
+
+    &-delivery,
+    &-pay,
+    &-person {
+        &__items {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        &__item {
+            padding: 10px;
+            border: $main-color 2px solid;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+
+    &-button {
+        background-color: $main-color;
+        padding: 10px;
+        border: transparent 2px solid;
+        border-radius: 10px;
+        width: 500px;
+        margin-top: 30px;
+
+        &>a {
+            font-size: 20px;
+        }
+    }
 }

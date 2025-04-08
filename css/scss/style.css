@@ -157,6 +157,7 @@ input[type=checkbox]:checked {
   justify-content: space-around;
   gap: 20px;
 }
+
 .cars {
   padding-top: 60px;
 }
@@ -439,4 +440,73 @@ input[type=checkbox]:checked {
 }
 .car-swiper-btn-prev, .car-swiper-btn-next {
   color: #00ac95;
+}
+
+.order__wrapper {
+  padding: 60px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  text-align: center;
+}
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+.order-name, .order-phone, .order-email, .order-delivery, .order-date, .order-pay, .order-person, .order-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.order-name__items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.order-name__item {
+  padding: 10px;
+  border-radius: 10px;
+  border: #00ac95 2px solid;
+  background-color: transparent;
+  width: 500px;
+  font-size: 16px;
+}
+.order-phone > input, .order-email > input, .order-date > input {
+  padding: 10px;
+  border-radius: 10px;
+  border: #00ac95 2px solid;
+  background-color: transparent;
+  width: 500px;
+  font-size: 16px;
+}
+.order-phone > input::-webkit-calendar-picker-indicator, .order-email > input::-webkit-calendar-picker-indicator, .order-date > input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+.order-delivery__items, .order-pay__items, .order-person__items {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.order-delivery__item, .order-pay__item, .order-person__item {
+  padding: 10px;
+  border: #00ac95 2px solid;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+.order-button {
+  background-color: #00ac95;
+  padding: 10px;
+  border: transparent 2px solid;
+  border-radius: 10px;
+  width: 500px;
+  margin-top: 30px;
+}
+.order-button > a {
+  font-size: 20px;
 }/*# sourceMappingURL=style.css.map */
