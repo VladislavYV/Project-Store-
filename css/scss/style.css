@@ -149,13 +149,16 @@ input[type=checkbox]:checked {
 }
 
 .menu {
-  padding-top: 60px;
+  padding: 30px;
+  background-color: #00ac95;
 }
 .menu-items__wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  gap: 20px;
+}
+.menu-items-item > a {
+  color: #000;
 }
 
 .cars {
@@ -316,6 +319,7 @@ input[type=checkbox]:checked {
   gap: 60px;
   align-items: end;
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 .cart-items {
   padding: 20px;
@@ -379,6 +383,13 @@ input[type=checkbox]:checked {
   padding: 10px 40px;
   background-color: #00ac95;
   border-radius: 10px;
+  border: 2px transparent solid;
+  transition: all 0.2s;
+}
+.cart-btn:hover {
+  background-color: transparent;
+  border: 2px #00ac95 solid;
+  color: #00ac95;
 }
 
 .car {
@@ -415,6 +426,13 @@ input[type=checkbox]:checked {
   padding: 10px 40px;
   background-color: #00ac95;
   border-radius: 10px;
+  border: 2px transparent solid;
+  transition: all 0.2s;
+}
+.car-btns__buy:hover {
+  background-color: transparent;
+  border: 2px #00ac95 solid;
+  color: #00ac95;
 }
 .car-btns__like > svg {
   height: 30px;
@@ -440,6 +458,56 @@ input[type=checkbox]:checked {
 }
 .car-swiper-btn-prev, .car-swiper-btn-next {
   color: #00ac95;
+}
+
+.related {
+  padding: 60px 0;
+}
+.related__wrapper > h2 {
+  padding-bottom: 30px;
+}
+.related-swiper {
+  display: flex;
+  flex-direction: row;
+}
+.related-swiper__wrapper {
+  width: auto;
+}
+.related-swiper-btn-prev, .related-swiper-btn-next {
+  color: #00ac95;
+}
+.related-card {
+  padding: 20px;
+  border: #00ac95 3px solid;
+  border-radius: 15px;
+  height: auto;
+}
+.related-card__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+.related-card__img {
+  display: flex;
+  justify-content: center;
+}
+.related-card__img > img {
+  height: 190px;
+  width: auto;
+}
+.related-card__stats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.related-card__stats-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.related-card__price > p {
+  font-size: 24px;
 }
 
 .order__wrapper {
@@ -506,7 +574,13 @@ input[type=checkbox]:checked {
   border-radius: 10px;
   width: 500px;
   margin-top: 30px;
+  transition: all 0.2s;
 }
 .order-button > a {
   font-size: 20px;
+}
+.order-button:hover {
+  background-color: transparent;
+  border: 2px #00ac95 solid;
+  color: #00ac95;
 }/*# sourceMappingURL=style.css.map */

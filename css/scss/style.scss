@@ -174,14 +174,21 @@ input[type="checkbox"] {
 // }
 
 .menu {
-    padding-top: 60px;
+    padding: 30px;
+    background-color: $main-color;
 
     &-items {
         &__wrapper {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            gap: 20px;
+        }
+
+        &-item {
+            &>a {
+                color: #000;
+
+            }
         }
     }
 }
@@ -402,6 +409,7 @@ input[type="checkbox"] {
         gap: 60px;
         align-items: end;
         padding-top: 60px;
+        padding-bottom: 60px;
     }
 
     &-items {
@@ -478,6 +486,14 @@ input[type="checkbox"] {
         padding: 10px 40px;
         background-color: $main-color;
         border-radius: 10px;
+        border: 2px transparent solid;
+        transition: all 0.2s;
+
+        &:hover {
+            background-color: transparent;
+            border: 2px $main-color solid;
+            color: $main-color;
+        }
     }
 }
 
@@ -520,6 +536,14 @@ input[type="checkbox"] {
             padding: 10px 40px;
             background-color: $main-color;
             border-radius: 10px;
+            border: 2px transparent solid;
+            transition: all 0.2s;
+
+            &:hover {
+                background-color: transparent;
+                border: 2px $main-color solid;
+                color: $main-color;
+            }
         }
 
         &__like {
@@ -558,6 +582,72 @@ input[type="checkbox"] {
     }
 
 
+}
+
+.related {
+    padding: 60px 0;
+
+    &__wrapper {
+        &>h2 {
+            padding-bottom: 30px;
+        }
+    }
+
+    &-swiper {
+        display: flex;
+        flex-direction: row;
+
+        &__wrapper {
+            width: auto;
+        }
+
+        &-btn-prev,
+        &-btn-next {
+            color: $main-color;
+        }
+    }
+
+    &-card {
+        
+        padding: 20px;
+        border: $main-color 3px solid;
+        border-radius: 15px;
+        height: auto;
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        &__img {
+            display: flex;
+            justify-content: center;
+            &>img {
+                height: 190px;
+                width: auto;
+            }
+        }
+
+        &__stats {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            &-text {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        &__price {
+            &>p {
+                font-size: 24px;
+            }
+        }
+    }
 }
 
 .order {
@@ -651,9 +741,16 @@ input[type="checkbox"] {
         border-radius: 10px;
         width: 500px;
         margin-top: 30px;
+        transition: all 0.2s;
 
         &>a {
             font-size: 20px;
+        }
+
+        &:hover {
+            background-color: transparent;
+            border: 2px $main-color solid;
+            color: $main-color;
         }
     }
 }

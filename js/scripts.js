@@ -20,6 +20,29 @@ const swiper = new Swiper('.car-swiper', {
     }
 });
 
+const swiperRelated = new Swiper('.related-swiper', {
+    direction: "horizontal",
+    slidesPerView: 4,
+    grabCursor: true,
+    loop: true,
+    spaceBetween: 20,
+    autoplay: {
+        delay: 3000,
+        pauseOnMouseEnter: true,
+    },
+
+    // pagination: {
+    //     el: '.related-swiper-pagination',
+    //     clickable: true,
+    // },
+
+    navigation: {
+        nextEl: '.related-swiper-btn-next',
+        prevEl: '.related-swiper-btn-prev',
+        
+    }
+});
+
 
 function changeCheckbox(elem) {
     let item = document.getElementById(elem);
