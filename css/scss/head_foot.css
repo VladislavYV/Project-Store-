@@ -3,13 +3,82 @@ header {
 }
 
 .menu {
-  padding: 30px;
+  padding: 10px;
 }
-.menu-items__wrapper {
+.menu__wrapper {
   display: flex;
   flex-direction: row;
+  gap: 30px;
+  align-items: center;
   justify-content: space-between;
 }
-.menu-items-item > a {
+.menu-logo__wrapper > a > svg {
+  width: 50px;
+  height: auto;
+}
+.menu-logo__wrapper > a > svg > g > path {
+  transition: all 0.3s;
+  fill: #fff;
+}
+.menu-logo__wrapper > a:hover > svg > g > path {
+  fill: #000;
+}
+.menu-items {
+  width: 100%;
+}
+.menu-items__wrapper {
+  text-align: center;
+}
+.menu-items__wrapper > a {
+  font-size: 20px;
+  transition: all 0.3s;
+}
+.menu-items__wrapper > a:hover {
   color: #000;
+}
+.menu-icons__wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+}
+.menu-icon__log, .menu-icon__favorite, .menu-icon__cart {
+  display: block;
+  align-items: center;
+  width: auto;
+}
+.menu-icon__log > svg, .menu-icon__favorite > svg, .menu-icon__cart > svg {
+  width: 30px;
+  height: auto;
+}
+.menu-icon__log > svg > path, .menu-icon__favorite > svg > path, .menu-icon__cart > svg > path {
+  fill: #fff;
+  transition: all 0.3s;
+}
+.menu-icon__log:hover > svg > path, .menu-icon__favorite:hover > svg > path, .menu-icon__cart:hover > svg > path {
+  fill: #000;
+}
+.menu-icon__favorite, .menu-icon__cart {
+  position: relative;
+}
+.menu-icon__favorite::after, .menu-icon__cart::after {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  display: block;
+  content: "3";
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  color: #00ac95;
+  border-radius: 50%;
+  border: 3px solid #00ac95;
+  text-align: center;
+  font-family: "Comfortaa";
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px;
+}
+.menu-icon__cart::after {
+  content: "6";
 }/*# sourceMappingURL=head_foot.css.map */

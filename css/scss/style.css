@@ -74,6 +74,18 @@ img {
   height: auto;
 }
 
+input {
+  cursor: pointer;
+}
+input:valid {
+  background-color: #00ac95;
+  color: #000;
+}
+input:invalid {
+  background-color: rgb(255, 151, 151);
+  border: 2px solid red;
+}
+
 input[type=radio],
 input[type=checkbox] {
   -webkit-appearance: none;
@@ -83,6 +95,7 @@ input[type=checkbox] {
   height: 20px;
   border: 2px solid #00ac95;
   transition: all 0.2s;
+  cursor: pointer;
 }
 input[type=radio]:checked,
 input[type=checkbox]:checked {

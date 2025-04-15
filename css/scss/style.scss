@@ -87,6 +87,20 @@ img {
     height: auto;
 }
 
+input {
+    cursor: pointer;
+
+    &:valid {
+        background-color: $main-color;
+        color: #000;
+    }
+
+    &:invalid {
+        background-color: rgb(255, 151, 151);
+        border: 2px solid red;
+    }
+}
+
 input[type="radio"],
 input[type="checkbox"] {
     appearance: none;
@@ -94,6 +108,7 @@ input[type="checkbox"] {
     height: 20px;
     border: 2px solid $main-color;
     transition: all 0.2s;
+    cursor: pointer;
 
     &:checked {
         transform: scale(0.5);

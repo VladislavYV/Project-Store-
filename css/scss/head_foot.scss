@@ -5,19 +5,121 @@ header {
 }
 
 .menu {
-    padding: 30px;
+    padding: 10px;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-logo {
+        &__wrapper {
+            &>a {
+                &>svg {
+                    width: 50px;
+                    height: auto;
+
+                    &>g>path {
+                        transition: all 0.3s;
+                        fill: #fff
+                    }
+                }
+
+                &:hover {
+                    &>svg {
+                        &>g>path {
+                            fill: #000
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     &-items {
+        width: 100%;
+
+        &__wrapper {
+            text-align: center;
+
+            &>a {
+                font-size: 20px;
+                transition: all 0.3s;
+                &:hover {
+                    color: #000;
+                }
+            }
+        }
+    }
+
+    &-icons {
         &__wrapper {
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            gap: 30px;
+            align-items: center;
+        }
+    }
+
+    &-icon {
+
+        &__log, &__favorite, &__cart {
+            
+            display: block;
+            align-items: center;
+            width: auto;
+
+            &>svg {
+                width: 30px;
+                height: auto;
+
+                &>path {
+                    fill: #fff;
+                    transition: all 0.3s;
+                }
+
+            }
+
+            &:hover {
+                &>svg {
+                    &>path {
+                        fill: #000;
+                    }
+    
+                } 
+            }
         }
 
-        &-item {
-            &>a {
-                color: #000;
+        &__favorite, &__cart {
+            position: relative;
 
+            &::after {
+                position: absolute;
+                top: -15px;
+                right: -15px;
+                display: block;
+                content: '3';
+                width: 15px;
+                height: 15px;
+                background-color: #fff;
+                color: $main-color;
+                border-radius: 50%;
+                border: 3px solid $main-color;
+                text-align: center;
+                font-family: "Comfortaa";
+                font-size: 16px;
+                font-weight: bold;
+                padding: 5px;
+            }
+        }
+
+        &__cart {
+
+            &::after {
+                content: '6';
             }
         }
     }
