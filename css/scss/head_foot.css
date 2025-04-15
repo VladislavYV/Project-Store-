@@ -1,0 +1,15 @@
+header {
+  background-color: #00ac95;
+}
+
+.menu {
+  padding: 30px;
+}
+.menu-items__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.menu-items-item > a {
+  color: #000;
+}/*# sourceMappingURL=head_foot.css.map */

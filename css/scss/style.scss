@@ -173,26 +173,6 @@ input[type="checkbox"] {
 //     background-color: $main-color;
 // }
 
-.menu {
-    padding: 30px;
-    background-color: $main-color;
-
-    &-items {
-        &__wrapper {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-        }
-
-        &-item {
-            &>a {
-                color: #000;
-
-            }
-        }
-    }
-}
-
 .cars {
     padding-top: 60px;
 
