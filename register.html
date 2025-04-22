@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Оформление заказа</title>
+    <title>Авторизация</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/scss/grid.css">
@@ -98,97 +98,46 @@
         </section>
     </header>
     <main>
-        <section class="order container">
-            <div class="order__wrapper col-12">
-                <h2 class="comfortaa-700 col-12">Оформление заказа</h2>
-                <form class="order-items">
-                    <div class="order-name">
-                        <label class="comfortaa-500" for="o-name">Ваше имя и фамилия</label>
-                        <div class="order-name__items">
-                            <input class="comfortaa-300 order-name__item" type="text" name="o-name" id="o-name" tabindex="0" role="text" aria-label="Имя" placeholder="Введите ваше имя" required>
-                            <input class="comfortaa-300 order-name__item" type="text" name="o-lastname" id="o-lastname" tabindex="0" role="text" aria-label="Фамилия" placeholder="Введите вашу фамилию" required>
+        <section class="auth container">
+            <div class="auth__wrapper">
+                <div class="reg col-6">
+                    <div class="reg__wrapper col-12">
+                        <div class="reg-text">
+                            <h2 class="comfortaa-700 col-12">Регистрация</h2>
+                            <p class="comfortaa-500">Введите данные для завершения регистрации.</p>
                         </div>
+                        <form class="reg-items">
+                            <div class="reg-name">
+                                <label class="comfortaa-500" for="r-name">Введите ваше имя:</label>
+                                <input class="comfortaa-300" type="text" name="r-name" id="r-name" tabindex="0" role="text" aria-label="Имя" placeholder="Введите ваше имя" required>
+                            </div>
+                            <div class="reg-email">
+                                <label class="comfortaa-500" for="r-email">Введите вашу эл. почту:</label>
+                                <input class="comfortaa-300" type="email" name="r-email" id="r-email" tabindex="0" role="text" aria-label="Адрес эл. почты" placeholder="Введите адрес вашей эл. почты" required>
+                            </div> 
+                            <div class="reg-pas">
+                                <label class="comfortaa-500" for="r-pas">Придумайте пароль:</label>
+                                <input class="comfortaa-300" type="password" name="r-pas" id="r-pas" tabindex="0" role="text" aria-label="Пароль" placeholder="Придумайте пароль" required>
+                            </div> 
+                            <div class="reg-pas2">
+                                <label class="comfortaa-500" for="r-pas2">Повторите пароль:</label>
+                                <input class="comfortaa-300" type="password" name="r-pas2" id="r-pas2" tabindex="0" role="text" aria-label="Повтор пароля" placeholder="Повторите пароль" required>
+                            </div>
+                            <div class="reg-btn">
+                                <input class="comfortaa-400" type="submit" id="r-btn">
+                            </div> 
+                        </form>
                     </div>
-                    <div class="order-phone">
-                        <label class="comfortaa-500" for="o-phone">Ваш номер телефона</label>
-                        <input class="comfortaa-300 order-phone-inp" type="tel" name="o-phone" id="o-phone" tabindex="0" role="text" aria-label="Номер телефона" placeholder="Введите ваш номер телефона" required>
-                    </div> 
-                    <div class="order-email">
-                        <label class="comfortaa-500" for="o-email">Ваш адрес эл. почты</label>
-                        <input class="comfortaa-300 order-email-inp" type="email" name="o-email" id="o-email" tabindex="0" role="text" aria-label="Электронная потча" placeholder="Введите адрес вашей эл. почты" required>
-                    </div> 
-                    <div class="order-delivery">
-                        <label class="comfortaa-500" for="delivery">Выберите способ доставки</label>
-                        <div class="order-delivery__items">
-                            <div class="order-delivery__item">
-                                <input class="order-delivery__radio" type="radio" name="delivery"
-                                    id="delivery-s">
-                                <label class="order-delivery__label comfortaa-300" for="delivery-s"
-                                    tabindex="0" id="delivery-s-label" aria-label="Самовывоз" role="radio"
-                                    aria-checked="false">Самовывоз</label>
-                            </div>
-                            <div class="order-delivery__item">
-                                <input class="order-delivery__radio" type="radio" name="delivery"
-                                    id="delivery-d">
-                                <label class="order-delivery__label comfortaa-300" for="delivery-d"
-                                    tabindex="0" id="delivery-d-label" aria-label="Доставка" role="radio"
-                                    aria-checked="false">Доставка эвакуатором</label>
-                            </div>
+                </div>
+                <div class="enter col-6">
+                    <div class="enter__wrapper col-12"> 
+                        <div class="enter-text">
+                            <h2 class="comfortaa-700 col-12">Вход</h2>
+                            <p class="comfortaa-500">Уже есть аккаунт?</p>
                         </div>
+                        <a href="enter.html" class="btn enter-btn--auth comfortaa-400">Войти</a>
                     </div>
-                    <div class="order-date">
-                        <label class="comfortaa-500" for="o-date">Выберите дату получения авто</label>
-                        <input class="comfortaa-300 order-date-inp" type="date" name="o-date" id="o-date" tabindex="0" role="date" aria-label="Дата" placeholder="Выберите дату">
-                    </div> 
-                    <div class="order-pay">
-                        <label class="comfortaa-500" for="pay">Выберите способ оплаты</label>
-                        <div class="order-pay__items">
-                            <div class="order-pay__item">
-                                <input class="order-pay__radio" type="radio" name="pay"
-                                    id="pay-nal">
-                                <label class="order-pay__label comfortaa-300" for="pay-nal"
-                                    tabindex="0" id="pay-nal-label" aria-label="Наличными" role="radio"
-                                    aria-checked="false">Наличными</label>
-                            </div>
-                            <div class="order-pay__item">
-                                <input class="order-pay__radio" type="radio" name="pay"
-                                    id="pay-card">
-                                <label class="order-pay__label comfortaa-300" for="pay-card"
-                                    tabindex="0" id="pay-card-label" aria-label="Картой" role="radio"
-                                    aria-checked="false">Картой</label>
-                            </div>
-                            <div class="order-pay__item">
-                                <input class="order-pay__radio" type="radio" name="pay"
-                                    id="pay-bank">
-                                <label class="order-pay__label comfortaa-300" for="pay-bank"
-                                    tabindex="0" id="pay-bank-label" aria-label="Банковский перевод" role="radio"
-                                    aria-checked="false">Банковским переводом</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="order-person">
-                        <label class="comfortaa-500" for="persons">Плательщик</label>
-                        <div class="order-person__items">
-                            <div class="order-person__item">
-                                <input class="order-person__radio" type="radio" name="person"
-                                    id="person-phys">
-                                <label class="order-person__label comfortaa-300" for="person-phys"
-                                    tabindex="0" id="person-phys-label" aria-label="Физическое лицо" role="radio"
-                                    aria-checked="false">Физическое лицо</label>
-                            </div>
-                            <div class="order-person__item">
-                                <input class="order-person__radio" type="radio" name="person"
-                                    id="person-yr">
-                                <label class="order-person__label comfortaa-300" for="person-yr"
-                                    tabindex="0" id="person-yr-label" aria-label="Юридическое лицо" role="radio"
-                                    aria-checked="false">Юридическое лицо</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="order-btn">
-                        <input class="comfortaa-400" type="submit" id="o-btn">
-                    </div> 
-                </form>
+                </div>
             </div>
         </section>
     </main>

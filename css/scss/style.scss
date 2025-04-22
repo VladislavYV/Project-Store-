@@ -15,6 +15,7 @@ $main-color: #00ac95;
 
 body {
     background-color: #292929;
+    position: relative;
 }
 
 .comfortaa {
@@ -187,6 +188,7 @@ input[type="checkbox"] {
 //     width: 100%;
 //     background-color: $main-color;
 // }
+
 
 .cars {
     padding-top: 60px;
@@ -599,11 +601,14 @@ input[type="checkbox"] {
         &-btn-prev,
         &-btn-next {
             color: $main-color;
+            &::after {
+                font-size: 25px;
+            }
         }
     }
 
     &-card {
-        
+
         padding: 20px;
         border: $main-color 3px solid;
         border-radius: 15px;
@@ -619,6 +624,7 @@ input[type="checkbox"] {
         &__img {
             display: flex;
             justify-content: center;
+
             &>img {
                 height: 190px;
                 width: auto;
@@ -657,8 +663,22 @@ input[type="checkbox"] {
     &-items {
         display: flex;
         flex-direction: column;
-        gap: 30px;
+        gap: 20px;
         align-items: center;
+    }
+
+    &-phone-inp, &-email-inp, &-date-inp {
+        padding: 10px;
+        border-radius: 10px;
+        border: $main-color 2px solid;
+        background-color: transparent;
+        width: 500px;
+        font-size: 16px;
+        color: #fff;
+
+        &::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+        }
     }
 
     &-name,
@@ -692,23 +712,6 @@ input[type="checkbox"] {
         }
     }
 
-    &-phone,
-    &-email,
-    &-date {
-        &>input {
-            padding: 10px;
-            border-radius: 10px;
-            border: $main-color 2px solid;
-            background-color: transparent;
-            width: 500px;
-            font-size: 16px;
-
-            &::-webkit-calendar-picker-indicator {
-                filter: invert(1);
-            }
-        }
-    }
-
     &-delivery,
     &-pay,
     &-person {
@@ -729,18 +732,117 @@ input[type="checkbox"] {
         }
     }
 
-    &-button {
-        background-color: $main-color;
+    &-btn {
+        &>input {
+            background-color: $main-color;
+            padding: 10px;
+            border: transparent 2px solid;
+            border-radius: 10px;
+            width: 500px;
+            margin-top: 30px;
+            transition: all 0.2s;
+            font-size: 16px;
+            color: #fff;
+    
+            &>a {
+                font-size: 20px;
+            }
+    
+            &:hover {
+                background-color: transparent;
+                border: 2px $main-color solid;
+                color: $main-color;
+            }
+        }
+    }
+}
+
+.auth {
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        padding-top: 60px;
+    }
+}
+
+.reg__wrapper,
+.enter__wrapper {
+    border: $main-color 2px solid;
+    border-radius: 15px;
+    padding: 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+    align-items: center;
+}
+
+.reg-text, .enter-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.reg-items, .enter-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.reg-name,
+.reg-email,
+.reg-pas,
+.reg-pas2,
+.enter-name,
+.enter-email,
+.enter-pas,
+.enter-pas2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    &>input {
         padding: 10px;
-        border: transparent 2px solid;
         border-radius: 10px;
-        width: 500px;
-        margin-top: 30px;
+        border: $main-color 2px solid;
+        background-color: transparent;
+        font-size: 16px;
+        color: #fff;
+        width: 350px;
+    }
+}
+
+.reg-btn, .enter-btn {
+
+    &--auth {
+        padding: 10px;
+        background-color: $main-color;
+        width: 350px;
+        border-radius: 10px;
+        border: transparent 2px solid;  
+        font-size: 16px;
+        color: #fff;
         transition: all 0.2s;
 
-        &>a {
-            font-size: 20px;
+        &:hover {
+            background-color: transparent;
+            border: 2px $main-color solid;
+            color: $main-color;
         }
+    }
+
+    >input {
+        padding: 10px;
+        background-color: $main-color;
+        width: 350px;
+        border-radius: 10px;
+        border: transparent 2px solid;  
+        font-size: 16px;
+        color: #fff;
+        transition: all 0.2s;
 
         &:hover {
             background-color: transparent;

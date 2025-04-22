@@ -3,12 +3,11 @@ header {
 }
 
 .menu {
-  padding: 10px;
+  padding: 10px 0px;
 }
 .menu__wrapper {
   display: flex;
   flex-direction: row;
-  gap: 30px;
   align-items: center;
   justify-content: space-between;
 }
@@ -42,10 +41,14 @@ header {
   gap: 30px;
   align-items: center;
 }
+.menu-icon__log {
+  font-size: 20px;
+}
 .menu-icon__log, .menu-icon__favorite, .menu-icon__cart {
   display: block;
   align-items: center;
   width: auto;
+  transition: all 0.3s;
 }
 .menu-icon__log > svg, .menu-icon__favorite > svg, .menu-icon__cart > svg {
   width: 30px;
@@ -54,6 +57,9 @@ header {
 .menu-icon__log > svg > path, .menu-icon__favorite > svg > path, .menu-icon__cart > svg > path {
   fill: #fff;
   transition: all 0.3s;
+}
+.menu-icon__log:hover, .menu-icon__favorite:hover, .menu-icon__cart:hover {
+  color: #000;
 }
 .menu-icon__log:hover > svg > path, .menu-icon__favorite:hover > svg > path, .menu-icon__cart:hover > svg > path {
   fill: #000;

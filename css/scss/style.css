@@ -12,6 +12,7 @@
 
 body {
   background-color: #292929;
+  position: relative;
 }
 
 .comfortaa-300 {
@@ -476,6 +477,9 @@ input[type=checkbox]:checked {
 .related-swiper-btn-prev, .related-swiper-btn-next {
   color: #00ac95;
 }
+.related-swiper-btn-prev::after, .related-swiper-btn-next::after {
+  font-size: 25px;
+}
 .related-card {
   padding: 20px;
   border: #00ac95 3px solid;
@@ -520,8 +524,20 @@ input[type=checkbox]:checked {
 .order-items {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   align-items: center;
+}
+.order-phone-inp, .order-email-inp, .order-date-inp {
+  padding: 10px;
+  border-radius: 10px;
+  border: #00ac95 2px solid;
+  background-color: transparent;
+  width: 500px;
+  font-size: 16px;
+  color: #fff;
+}
+.order-phone-inp::-webkit-calendar-picker-indicator, .order-email-inp::-webkit-calendar-picker-indicator, .order-date-inp::-webkit-calendar-picker-indicator {
+  filter: invert(1);
 }
 .order-name, .order-phone, .order-email, .order-delivery, .order-date, .order-pay, .order-person, .order-buttons {
   display: flex;
@@ -542,17 +558,6 @@ input[type=checkbox]:checked {
   width: 500px;
   font-size: 16px;
 }
-.order-phone > input, .order-email > input, .order-date > input {
-  padding: 10px;
-  border-radius: 10px;
-  border: #00ac95 2px solid;
-  background-color: transparent;
-  width: 500px;
-  font-size: 16px;
-}
-.order-phone > input::-webkit-calendar-picker-indicator, .order-email > input::-webkit-calendar-picker-indicator, .order-date > input::-webkit-calendar-picker-indicator {
-  filter: invert(1);
-}
 .order-delivery__items, .order-pay__items, .order-person__items {
   display: flex;
   flex-direction: row;
@@ -567,7 +572,7 @@ input[type=checkbox]:checked {
   align-items: center;
   gap: 5px;
 }
-.order-button {
+.order-btn > input {
   background-color: #00ac95;
   padding: 10px;
   border: transparent 2px solid;
@@ -575,11 +580,106 @@ input[type=checkbox]:checked {
   width: 500px;
   margin-top: 30px;
   transition: all 0.2s;
+  font-size: 16px;
+  color: #fff;
 }
-.order-button > a {
+.order-btn > input > a {
   font-size: 20px;
 }
-.order-button:hover {
+.order-btn > input:hover {
+  background-color: transparent;
+  border: 2px #00ac95 solid;
+  color: #00ac95;
+}
+
+.auth__wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding-top: 60px;
+}
+
+.reg__wrapper,
+.enter__wrapper {
+  border: #00ac95 2px solid;
+  border-radius: 15px;
+  padding: 40px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  text-align: center;
+  align-items: center;
+}
+
+.reg-text, .enter-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.reg-items, .enter-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reg-name,
+.reg-email,
+.reg-pas,
+.reg-pas2,
+.enter-name,
+.enter-email,
+.enter-pas,
+.enter-pas2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.reg-name > input,
+.reg-email > input,
+.reg-pas > input,
+.reg-pas2 > input,
+.enter-name > input,
+.enter-email > input,
+.enter-pas > input,
+.enter-pas2 > input {
+  padding: 10px;
+  border-radius: 10px;
+  border: #00ac95 2px solid;
+  background-color: transparent;
+  font-size: 16px;
+  color: #fff;
+  width: 350px;
+}
+
+.reg-btn--auth, .enter-btn--auth {
+  padding: 10px;
+  background-color: #00ac95;
+  width: 350px;
+  border-radius: 10px;
+  border: transparent 2px solid;
+  font-size: 16px;
+  color: #fff;
+  transition: all 0.2s;
+}
+.reg-btn--auth:hover, .enter-btn--auth:hover {
+  background-color: transparent;
+  border: 2px #00ac95 solid;
+  color: #00ac95;
+}
+.reg-btn > input, .enter-btn > input {
+  padding: 10px;
+  background-color: #00ac95;
+  width: 350px;
+  border-radius: 10px;
+  border: transparent 2px solid;
+  font-size: 16px;
+  color: #fff;
+  transition: all 0.2s;
+}
+.reg-btn > input:hover, .enter-btn > input:hover {
   background-color: transparent;
   border: 2px #00ac95 solid;
   color: #00ac95;
