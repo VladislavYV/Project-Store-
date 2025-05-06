@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/scss/grid.css">
     <link rel="stylesheet" href="css/scss/style.css">
     <link rel="stylesheet" href="css/scss/head_foot.css">
+    <link rel="stylesheet" href="css/scss/media.css">
 </head>
 
 <body>
@@ -96,14 +97,29 @@
     <main>
         <section class="cars container">
             <div class="cars-wrapper">
-                <h2 class="comfortaa-700 col-12">
-                    Наши предложения
-                </h2>
+                <div class="cars-head">
+                    <div class="cars-head__wrapper">
+                        <h2 class="comfortaa-700 col-12">
+                            Наши предложения
+                        </h2>
+                        <div class="cars-sort">
+                            <div class="cars-sort__wrapper">
+                                <H3 class="comfortaa-500">Сортировка:</H3>
+                                <select class="cars-sort-btn comfortaa-300" name="sort" id="sort">
+                                    <option class="comfortaa-300" value="rale">По релевантности</option>
+                                    <option class="comfortaa-300" value="new">По новизне</option>
+                                    <option class="comfortaa-300" value="cost-up">По возрастанию цены</option>
+                                    <option class="comfortaa-300" value="cost-dawn">По убыванию цены</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="cars-catalog">
                     <div class="cars-catalog__wrapper">
                         <div class="cars-filters col-2">
                             <div class="cars-filters__wrapper">
-                                <h3 class="comfortaa-500">Фильтр</h3>
+                                <h3 class="comfortaa-500">Фильтры</h3>
                                 <div class="cars-filters__items">
                                     <div class="cars-filters__colors">
                                         <h4 class="comfortaa-500">Цвет</h4>
@@ -350,7 +366,7 @@
                         </div>
                         <div class="cars-cards col-10">
                             <div class="cars-cards__wrapper">
-                                <div class="cars-card col-4">
+                                <div class="cars-card">
                                     <div class="cars-card__wrapper">
                                         <h3 class="comfortaa-500">
                                             Audi TT
@@ -397,7 +413,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="cars-card col-3">
+                                <div class="cars-card">
                                     <div class="cars-card__wrapper">
                                         <h3 class="comfortaa-500">
                                             Volkswagen Golf
@@ -444,7 +460,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="cars-card col-4">
+                                <div class="cars-card">
                                     <div class="cars-card__wrapper">
                                         <h3 class="comfortaa-500">
                                             Jaguar F-Pace
@@ -491,7 +507,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="cars-card col-3">
+                                <div class="cars-card">
                                     <div class="cars-card__wrapper">
                                         <h3 class="comfortaa-500">
                                             Audi A4
@@ -538,7 +554,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="cars-card col-4">
+                                <div class="cars-card">
                                     <div class="cars-card__wrapper">
                                         <h3 class="comfortaa-500">
                                             Lada Vesta SW
@@ -585,7 +601,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="cars-card col-4">
+                                <div class="cars-card">
                                     <div class="cars-card__wrapper">
                                         <h3 class="comfortaa-500">
                                             Lada Vesta
@@ -632,7 +648,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="cars-card col-4">
+                                <div class="cars-card">
                                     <div class="cars-card__wrapper">
                                         <h3 class="comfortaa-500">
                                             Opel Astra J
@@ -679,7 +695,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="cars-card col-3">
+                                <div class="cars-card">
                                     <div class="cars-card__wrapper">
                                         <h3 class="comfortaa-500">
                                             Nissan Juke
@@ -726,7 +742,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="cars-card col-4">
+                                <div class="cars-card">
                                     <div class="cars-card__wrapper">
                                         <h3 class="comfortaa-500">
                                             Ford Fiesta
@@ -773,7 +789,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="cars-card col-4">
+                                <div class="cars-card">
                                     <div class="cars-card__wrapper">
                                         <h3 class="comfortaa-500">
                                             Mazda 3
@@ -820,7 +836,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="cars-card col-4">
+                                <div class="cars-card">
                                     <div class="cars-card__wrapper">
                                         <h3 class="comfortaa-500">
                                             Chevrolet Cruze
@@ -867,7 +883,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="cars-card col-3">
+                                <div class="cars-card">
                                     <div class="cars-card__wrapper">
                                         <h3 class="comfortaa-500">
                                             Citroen DS 4
@@ -914,6 +930,11 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="cars-cards-pagination">
+                                <button class="btn-pagination comfortaa-400">
+                                    Показать ещё
+                                </button>
                             </div>
                         </div>
                     </div>

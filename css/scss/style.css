@@ -164,12 +164,33 @@ input[type=checkbox]:checked {
 
 .cars {
   padding-top: 60px;
+  padding-bottom: 60px;
+}
+.cars-head__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.cars-sort__wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: end;
+}
+.cars-sort-btn {
+  background-color: transparent;
+  border: #00ac95 2px solid;
+  border-radius: 7px;
+  padding: 5px;
+}
+.cars-sort-btn option {
+  background-color: #00ac95;
 }
 .cars-catalog__wrapper {
   padding-top: 60px;
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 10px;
 }
 .cars-filters__items {
   padding-top: 60px;
@@ -233,10 +254,31 @@ input[type=checkbox]:checked {
   justify-content: space-between;
 }
 .cars-cards__wrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto auto auto;
   gap: 20px;
+}
+.cars-cards-pagination {
+  padding-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.cars-cards-pagination > button {
+  display: block;
+  font-size: 20px;
+  color: #fff;
+  background-color: #00ac95;
+  border: 2px transparent solid;
+  border-radius: 10px;
+  padding: 5px 20px 5px 20px;
+  transition: 0.2s;
+}
+.cars-cards-pagination > button:hover {
+  background-color: transparent;
+  border: 2px #00ac95 solid;
+  color: #00ac95;
 }
 .cars-card__wrapper {
   padding: 20px;

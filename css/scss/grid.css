@@ -52,4 +52,8 @@
 .col-12 {
   width: 100%;
   max-width: 100%;
+}
+.col-auto {
+  width: 100%;
+  max-width: auto;
 }/*# sourceMappingURL=grid.css.map */
