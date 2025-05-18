@@ -133,4 +133,19 @@ header {
             }
         }
     }
+
+    &-hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        display: none;
+        &>span {
+            content: '';
+            display: block;
+            width: 45px;
+            height: 4px;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+    }
 }

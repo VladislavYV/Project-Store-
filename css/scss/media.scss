@@ -1,0 +1,108 @@
+h {
+    &1 {}
+
+    &2 {
+        @media screen and (max-width: 1200px) {
+            font-size: 25px;
+        }
+    }
+
+    &3 {
+        @media screen and (max-width: 1200px) {
+            font-size: 22px;
+        }
+    }
+
+    &4 {
+        @media screen and (max-width: 1200px) {
+            font-size: 18px;
+        }
+    }
+}
+
+.menu {
+    @media screen and (max-width: 640px) {
+        padding: 10px 10px;
+    }
+
+    &-items {
+        @media screen and (max-width: 640px) {
+            display: none;
+        }
+    }
+
+    &-icons {
+        @media screen and (max-width: 640px) {
+            display: none;
+        }
+    }
+
+    &-hamburger {
+        @media screen and (max-width: 640px) {
+            display: flex;
+        }
+    }
+}
+
+.cars {
+    &-sort {
+        @media screen and (max-width: 960px) {
+            display: flex;
+        }
+    }
+
+    &-filters {
+        @media screen and (max-width: 1200px) {
+            max-width: 25%;
+        }
+
+        @media screen and (max-width: 960px) {
+            max-width: 35%;
+        }
+    }
+
+    &-cards {
+        &__wrapper {
+            grid-template-rows: auto;
+            gap: 20px;
+
+            @media screen and (max-width: 1600px) {}
+
+            @media screen and (max-width: 1440px) {}
+
+            @media screen and (max-width: 1200px) {
+                grid-template-columns: auto auto;
+            }
+
+            @media screen and (max-width: 960px) {
+                grid-template-columns: auto;
+            }
+
+            @media screen and (max-width: 640px) {}
+
+            @media screen and (max-width: 320px) {}
+        }
+    }
+}
+
+.auth__wrapper {
+    @media screen and (max-width: 960px) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 640px) {}
+
+    @media screen and (max-width: 320px) {}
+}
+
+.reg,
+.enter {
+    @media screen and (max-width: 960px) {
+        max-width: 100%;
+    }
+
+    @media screen and (max-width: 640px) {}
+
+    @media screen and (max-width: 320px) {}
+}

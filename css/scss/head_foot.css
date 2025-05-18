@@ -87,4 +87,18 @@ header {
 }
 .menu-icon__cart::after {
   content: "6";
+}
+.menu-hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  display: none;
+}
+.menu-hamburger > span {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 50%;
 }/*# sourceMappingURL=head_foot.css.map */

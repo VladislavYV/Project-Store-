@@ -1,1 +1,78 @@
-/*# sourceMappingURL=media.css.map */
+@media screen and (max-width: 1200px) {
+  h2 {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  h3 {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  h4 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .menu {
+    padding: 10px 10px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .menu-items {
+    display: none;
+  }
+}
+@media screen and (max-width: 640px) {
+  .menu-icons {
+    display: none;
+  }
+}
+@media screen and (max-width: 640px) {
+  .menu-hamburger {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .cars-sort {
+    display: flex;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .cars-filters {
+    max-width: 25%;
+  }
+}
+@media screen and (max-width: 960px) {
+  .cars-filters {
+    max-width: 35%;
+  }
+}
+.cars-cards__wrapper {
+  grid-template-rows: auto;
+  gap: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .cars-cards__wrapper {
+    grid-template-columns: auto auto;
+  }
+}
+@media screen and (max-width: 960px) {
+  .cars-cards__wrapper {
+    grid-template-columns: auto;
+  }
+}
+@media screen and (max-width: 960px) {
+  .auth__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 960px) {
+  .reg,
+  .enter {
+    max-width: 100%;
+  }
+}/*# sourceMappingURL=media.css.map */
