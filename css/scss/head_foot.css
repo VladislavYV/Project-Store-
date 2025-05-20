@@ -101,4 +101,36 @@ header {
   height: 4px;
   background-color: #fff;
   border-radius: 50%;
+}
+
+.footer {
+  background-color: #00ac95;
+  padding: 50px;
+}
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.footer-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+}
+.footer-logo > a > svg {
+  width: 100px;
+  height: auto;
+}
+.footer-logo > a > svg > g > path {
+  transition: all 0.3s;
+  fill: #fff;
+}
+.footer-logo > a:hover > svg > g > path {
+  fill: #000;
+}
+.footer-menu > ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
 }/*# sourceMappingURL=head_foot.css.map */
