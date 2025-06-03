@@ -573,6 +573,7 @@ input[type="checkbox"] {
     }
 
     &-btns {
+        height: 42px;
         display: flex;
         flex-direction: row;
         align-items: center;

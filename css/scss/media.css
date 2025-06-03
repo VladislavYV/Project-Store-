@@ -96,6 +96,36 @@
     flex-direction: column;
   }
 }
+@media screen and (max-width: 992px) {
+  .car-info {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .car-info__wrapper {
+    max-width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .car-info__wrapper {
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .car-info__wrapper {
+    gap: 15px;
+    flex-direction: column;
+    justify-content: start;
+  }
+}
+@media screen and (max-width: 768px) {
+  .car-info__text {
+    gap: 5px;
+  }
+}
 @media screen and (max-width: 1200px) {
   .car-swiper {
     height: 400px;
@@ -103,7 +133,23 @@
 }
 @media screen and (max-width: 992px) {
   .car-swiper {
-    height: 300px;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .car-swiper {
+    height: 250px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .car-swiper {
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .related {
+    display: none;
   }
 }
 
@@ -181,5 +227,17 @@
 @media screen and (max-width: 576px) {
   .order-delivery__items, .order-pay__items, .order-person__items {
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .cart-wrapper {
+    padding: 30px 10px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-end;
   }
 }/*# sourceMappingURL=media.css.map */
