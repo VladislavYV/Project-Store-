@@ -92,6 +92,22 @@
 }
 
 @media screen and (max-width: 992px) {
+  .car__wrapper {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .car-swiper {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .car-swiper {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 992px) {
   .auth__wrapper {
     display: flex;
     flex-direction: column;
@@ -101,43 +117,43 @@
 
 @media screen and (max-width: 992px) {
   .reg,
-  .enter {
+.enter {
     max-width: 100%;
   }
 }
 @media screen and (max-width: 576px) {
   .reg__wrapper,
-  .enter__wrapper {
+.enter__wrapper {
     padding: 20px;
   }
 }
 @media screen and (max-width: 576px) {
   .reg-name > input, .reg-name--auth, .reg-email > input, .reg-email--auth, .reg-pas > input, .reg-pas--auth, .reg-pas2 > input, .reg-pas2--auth, .reg-btn > input, .reg-btn--auth,
-  .enter-name > input,
-  .enter-name--auth,
-  .enter-email > input,
-  .enter-email--auth,
-  .enter-pas > input,
-  .enter-pas--auth,
-  .enter-pas2 > input,
-  .enter-pas2--auth,
-  .enter-btn > input,
-  .enter-btn--auth {
+.enter-name > input,
+.enter-name--auth,
+.enter-email > input,
+.enter-email--auth,
+.enter-pas > input,
+.enter-pas--auth,
+.enter-pas2 > input,
+.enter-pas2--auth,
+.enter-btn > input,
+.enter-btn--auth {
     max-width: 75%;
   }
 }
 @media screen and (max-width: 320px) {
   .reg-name > input, .reg-name--auth, .reg-email > input, .reg-email--auth, .reg-pas > input, .reg-pas--auth, .reg-pas2 > input, .reg-pas2--auth, .reg-btn > input, .reg-btn--auth,
-  .enter-name > input,
-  .enter-name--auth,
-  .enter-email > input,
-  .enter-email--auth,
-  .enter-pas > input,
-  .enter-pas--auth,
-  .enter-pas2 > input,
-  .enter-pas2--auth,
-  .enter-btn > input,
-  .enter-btn--auth {
+.enter-name > input,
+.enter-name--auth,
+.enter-email > input,
+.enter-email--auth,
+.enter-pas > input,
+.enter-pas--auth,
+.enter-pas2 > input,
+.enter-pas2--auth,
+.enter-btn > input,
+.enter-btn--auth {
     max-width: 50%;
   }
 }

@@ -107,6 +107,23 @@ h {
     }
 }
 
+.car {
+    &__wrapper {
+        @media screen and (max-width: 992px) {
+            flex-direction: column;
+        }
+    }
+    &-swiper {
+        @media screen and (max-width: 1200px) {
+            height: 400px;
+        }
+
+        @media screen and (max-width: 992px) {
+            height: 300px;
+        }
+    }
+}
+
 .auth__wrapper {
     @media screen and (max-width: 992px) {
         display: flex;
