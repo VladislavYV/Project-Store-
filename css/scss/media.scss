@@ -1,6 +1,4 @@
 h {
-    &1 {}
-
     &2 {
         @media screen and (max-width: 1200px) {
             font-size: 25px;
@@ -21,33 +19,57 @@ h {
 }
 
 .menu {
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 768px) {
         padding: 10px 10px;
     }
 
     &-items {
-        @media screen and (max-width: 640px) {
+        @media screen and (max-width: 768px) {
             display: none;
         }
     }
 
     &-icons {
-        @media screen and (max-width: 640px) {
+        @media screen and (max-width: 768px) {
             display: none;
         }
     }
 
     &-hamburger {
-        @media screen and (max-width: 640px) {
+        @media screen and (max-width: 768px) {
             display: flex;
         }
     }
 }
 
 .cars {
+
+    @media screen and (max-width: 768px) {
+        padding: 30px 10px;
+    }
+
+    &-head {
+        &__wrapper {
+            @media screen and (max-width: 992px) {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    }
+
+    &-catalog {
+        &__wrapper {
+            @media screen and (max-width: 768px) {
+                padding: 30px 0px;
+            }
+        }
+    }
+
     &-sort {
-        @media screen and (max-width: 960px) {
-            display: flex;
+        &__wrapper {
+            @media screen and (max-width: 576px) {
+                display: none;
+            }
         }
     }
 
@@ -56,53 +78,109 @@ h {
             max-width: 25%;
         }
 
-        @media screen and (max-width: 960px) {
+        @media screen and (max-width: 992px) {
             max-width: 35%;
+        }
+
+        @media screen and (max-width: 768px) {
+            display: none;
         }
     }
 
     &-cards {
+        @media screen and (max-width: 768px) {
+            max-width: 100%;
+        }
+
         &__wrapper {
             grid-template-rows: auto;
             gap: 20px;
-
-            @media screen and (max-width: 1600px) {}
-
-            @media screen and (max-width: 1440px) {}
 
             @media screen and (max-width: 1200px) {
                 grid-template-columns: auto auto;
             }
 
-            @media screen and (max-width: 960px) {
+            @media screen and (max-width: 992px) {
                 grid-template-columns: auto;
             }
-
-            @media screen and (max-width: 640px) {}
-
-            @media screen and (max-width: 320px) {}
         }
     }
 }
 
 .auth__wrapper {
-    @media screen and (max-width: 960px) {
+    @media screen and (max-width: 992px) {
         display: flex;
         flex-direction: column;
+        padding: 30px 10px;
     }
-
-    @media screen and (max-width: 640px) {}
-
-    @media screen and (max-width: 320px) {}
 }
 
 .reg,
 .enter {
-    @media screen and (max-width: 960px) {
+    @media screen and (max-width: 992px) {
         max-width: 100%;
     }
 
-    @media screen and (max-width: 640px) {}
+    &__wrapper {
+        @media screen and (max-width: 576px) {
+            padding: 20px;
+        }
+    }
 
-    @media screen and (max-width: 320px) {}
+    &-name,
+    &-email,
+    &-pas,
+    &-pas2,
+    &-btn {
+
+        &>input,
+        &--auth {
+            @media screen and (max-width: 576px) {
+                max-width: 75%;
+            }
+
+            @media screen and (max-width: 320px) {
+                max-width: 50%;
+            }
+        }
+    }
+}
+
+.order {
+    &__wrapper {
+        @media screen and (max-width: 576px) {
+            padding: 30px 10px;
+        }
+    }
+
+    &-name__items,
+    &-phone,
+    &-email,
+    &-date,
+    &-btn {
+
+        @media screen and (max-width: 576px) {
+            max-width: 100%;
+        }
+
+        &>input {
+            @media screen and (max-width: 576px) {
+                max-width: 75%;
+            }
+
+            @media screen and (max-width: 320px) {
+                max-width: 50%;
+            }
+        }
+    }
+
+    &-delivery,
+    &-pay,
+    &-person {
+        &__items {
+            @media screen and (max-width: 576px) {
+                flex-direction: column;
+            }
+        }
+    }
 }

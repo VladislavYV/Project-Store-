@@ -14,30 +14,46 @@
   }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .menu {
     padding: 10px 10px;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .menu-items {
     display: none;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .menu-icons {
     display: none;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .menu-hamburger {
     display: flex;
   }
 }
 
-@media screen and (max-width: 960px) {
-  .cars-sort {
-    display: flex;
+@media screen and (max-width: 768px) {
+  .cars {
+    padding: 30px 10px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .cars-head__wrapper {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cars-catalog__wrapper {
+    padding: 30px 0px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .cars-sort__wrapper {
+    display: none;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -45,9 +61,19 @@
     max-width: 25%;
   }
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 992px) {
   .cars-filters {
     max-width: 35%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cars-filters {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cars-cards {
+    max-width: 100%;
   }
 }
 .cars-cards__wrapper {
@@ -59,20 +85,85 @@
     grid-template-columns: auto auto;
   }
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 992px) {
   .cars-cards__wrapper {
     grid-template-columns: auto;
   }
 }
-@media screen and (max-width: 960px) {
+
+@media screen and (max-width: 992px) {
   .auth__wrapper {
     display: flex;
     flex-direction: column;
+    padding: 30px 10px;
   }
 }
-@media screen and (max-width: 960px) {
+
+@media screen and (max-width: 992px) {
   .reg,
   .enter {
     max-width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .reg__wrapper,
+  .enter__wrapper {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .reg-name > input, .reg-name--auth, .reg-email > input, .reg-email--auth, .reg-pas > input, .reg-pas--auth, .reg-pas2 > input, .reg-pas2--auth, .reg-btn > input, .reg-btn--auth,
+  .enter-name > input,
+  .enter-name--auth,
+  .enter-email > input,
+  .enter-email--auth,
+  .enter-pas > input,
+  .enter-pas--auth,
+  .enter-pas2 > input,
+  .enter-pas2--auth,
+  .enter-btn > input,
+  .enter-btn--auth {
+    max-width: 75%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .reg-name > input, .reg-name--auth, .reg-email > input, .reg-email--auth, .reg-pas > input, .reg-pas--auth, .reg-pas2 > input, .reg-pas2--auth, .reg-btn > input, .reg-btn--auth,
+  .enter-name > input,
+  .enter-name--auth,
+  .enter-email > input,
+  .enter-email--auth,
+  .enter-pas > input,
+  .enter-pas--auth,
+  .enter-pas2 > input,
+  .enter-pas2--auth,
+  .enter-btn > input,
+  .enter-btn--auth {
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .order__wrapper {
+    padding: 30px 10px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .order-name__items, .order-phone, .order-email, .order-date, .order-btn {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .order-name__items > input, .order-phone > input, .order-email > input, .order-date > input, .order-btn > input {
+    max-width: 75%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .order-name__items > input, .order-phone > input, .order-email > input, .order-date > input, .order-btn > input {
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .order-delivery__items, .order-pay__items, .order-person__items {
+    flex-direction: column;
   }
 }/*# sourceMappingURL=media.css.map */

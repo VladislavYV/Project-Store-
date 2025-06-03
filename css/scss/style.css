@@ -591,6 +591,7 @@ input[type=checkbox]:checked {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  align-items: center;
 }
 .order-name__item {
   padding: 10px;
