@@ -139,6 +139,7 @@ header {
         flex-direction: column;
         gap: 7px;
         display: none;
+
         &>span {
             content: '';
             display: block;
@@ -146,6 +147,56 @@ header {
             height: 4px;
             background-color: #fff;
             border-radius: 50%;
+        }
+    }
+}
+
+.footer {
+    background-color: $main-color;
+    padding: 50px;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 50px;
+    }
+
+    &-logo {
+        &>a {
+            &>svg {
+                width: 100px;
+                height: auto;
+
+                &>g>path {
+                    transition: all 0.3s;
+                    fill: #fff
+                }
+            }
+
+            &:hover {
+                &>svg {
+                    &>g>path {
+                        fill: #000
+                    }
+                }
+            }
+        }
+    }
+
+    &-menu {
+        &>ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+
+            &>li {}
         }
     }
 }
